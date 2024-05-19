@@ -1,3 +1,4 @@
+using System.Reflection;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,4 +9,9 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Client> Clients { get; set; }
     public DbSet<Account> Accounts { get; set; }
     public DbSet<Transfer> Transfers { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
 }

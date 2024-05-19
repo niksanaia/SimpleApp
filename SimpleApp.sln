@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApp", "SimpleApp\SimpleApp.csproj", "{4965F3C8-B34C-40F6-A02F-F2B3B46AA044}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2BEC933B-7A26-4F3B-AB4F-3BC4D221F4CD}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{9745D24F-5D76-483D-9903-E47986E30FC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{301DACFA-97D7-4805-847B-4A8ED0659D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{F4A0B397-3BE9-4EF8-8BBF-6F021FD18D95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4965F3C8-B34C-40F6-A02F-F2B3B46AA044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4965F3C8-B34C-40F6-A02F-F2B3B46AA044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4965F3C8-B34C-40F6-A02F-F2B3B46AA044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4965F3C8-B34C-40F6-A02F-F2B3B46AA044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9745D24F-5D76-483D-9903-E47986E30FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9745D24F-5D76-483D-9903-E47986E30FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9745D24F-5D76-483D-9903-E47986E30FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9745D24F-5D76-483D-9903-E47986E30FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{301DACFA-97D7-4805-847B-4A8ED0659D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{301DACFA-97D7-4805-847B-4A8ED0659D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{301DACFA-97D7-4805-847B-4A8ED0659D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{301DACFA-97D7-4805-847B-4A8ED0659D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A0B397-3BE9-4EF8-8BBF-6F021FD18D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A0B397-3BE9-4EF8-8BBF-6F021FD18D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A0B397-3BE9-4EF8-8BBF-6F021FD18D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A0B397-3BE9-4EF8-8BBF-6F021FD18D95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -24,8 +24,8 @@ public class UnitOfWork(ApplicationDbContext context) : IUnitOfWork
         return repository;
     }
 
-    public async Task<int> SaveChangesAsync()
+    public Task<int> SaveChangesAsync(CancellationToken cancellationToken)
     {
-        return await _context.SaveChangesAsync();
+        return _context.SaveChangesAsync(cancellationToken);
     }
 }

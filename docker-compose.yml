@@ -1,6 +1,38 @@
-﻿services:
+﻿version: '3.8'
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
   simpleapp:
-    image: simpleapp
+    image: ${DOCKER_REGISTRY-}simpleapp
+    container_name: simpleapp
     build:
       context: .
       dockerfile: SimpleApp/Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnectionString=Server=simpleapp.db;Database=Transfers; User Id=sa;Password=Aa123456;TrustServerCertificate=True;
+    ports:
+      - "8080:8080"
+    depends_on:
+      - simpleapp.db
+    networks:
+      - app-network
+  simpleapp.db:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: simpleapp.db
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Aa123456
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    restart: always
+    volumes:
+      - azure-sql-storage:/var/opt/mssql
+    networks:
+      - app-network
+
+volumes:
+  azure-sql-storage:
